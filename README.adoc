@@ -1,22 +1,22 @@
 = Asemmbly Language HTTP Server (Arm64 Mach-O)
 
-This is a simple HTTP server that returns the equivalent of "Hello, World!" in HTML to any client that connects to it. It is written in Arm64 assembly language and is designed to run on macOS.
+This project is a simple HTTP server that returns "Hello, World!" in HTML to any client that connects to it (NOTE: it does not validate requests nor parses them).
 
 == Why?
 
-I wanted to learn more about Arm64 assembly language. I personally find that writing a simple HTTP server is a good way to learn a new programming language or platform. It's a good way to learn about sockets, file I/O, and string manipulation.
+I wanted to learn more about Arm64 assembly language. I find that writing a simple HTTP server teaches you te basics of a new programming language or platform quickly. It's a good way to learn about sockets, file I/O, and string manipulation.
 
 == Note
 
 Please do not use my code as a reference for writing assembly language. I am not an expert in assembly language and I am sure that there are many things that I could have done better. I wrote this project as a learning exercise and even though it works, I am sure that an experienced assembly language programmer would have written it differently.
 
-Additionally, I wrote this project for macOS. It probably can run on linux or other Unix-like operating systems, but it probably would require modifications to the makefile and (possibly) the assembly code.
+Additionally, I wrote this project for macOS. It probably can run on Linux or other Unix-like operating systems, but it probably would require modifications to the makefile and (possibly) the assembly code.
 
 == Development
 
 === Notes
 
-I will most likely not be accepting any contributions to this project. I wrote this project as a learning exercise and I don't see it as something that I would like to maintain or expand upon. I am open to answering questions about the project, but I don't plan on accepting any pull requests.
+I will likely not be accepting any contributions to this project. I wrote this project as a learning exercise and I don't see it as something that I would like to maintain or expand upon. I am open to answering questions about the project but don't plan to accept any pull requests.
 
 === Prerequisites
 
@@ -43,7 +43,7 @@ This will build the project and create an executable called `./build/server`.
 
 === Running
 
-Just like building the project, running the project is also really easy. You can excute the server by running the following command in your terminal:
+Just like building the project, running the project is also really easy. You can execute the server by running the following command in your terminal:
 
 [source,sh]
 ----
