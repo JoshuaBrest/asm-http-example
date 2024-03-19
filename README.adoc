@@ -1,0 +1,79 @@
+= Asemmbly Language HTTP Server (Arm64 Mach-O)
+
+This is a simple HTTP server that returns the equivalent of "Hello, World!" in HTML to any client that connects to it. It is written in Arm64 assembly language and is designed to run on macOS.
+
+== Why?
+
+I wanted to learn more about Arm64 assembly language. I personally find that writing a simple HTTP server is a good way to learn a new programming language or platform. It's a good way to learn about sockets, file I/O, and string manipulation.
+
+== Note
+
+Please do not use my code as a reference for writing assembly language. I am not an expert in assembly language and I am sure that there are many things that I could have done better. I wrote this project as a learning exercise and even though it works, I am sure that an experienced assembly language programmer would have written it differently.
+
+Additionally, I wrote this project for macOS. It probably can run on linux or other Unix-like operating systems, but it probably would require modifications to the makefile and (possibly) the assembly code.
+
+== Development
+
+=== Notes
+
+I will most likely not be accepting any contributions to this project. I wrote this project as a learning exercise and I don't see it as something that I would like to maintain or expand upon. I am open to answering questions about the project, but I don't plan on accepting any pull requests.
+
+=== Prerequisites
+
+You probably already have the development tools that you need to build this project. Nevertheless, you will need both `clang`, `ld`, and `make` to build the project.
+
+You can install these tools using the Xcode command line tools. If you don't have the Xcode command line tools installed, you can install them by running the following command in your terminal:
+
+[source,sh]
+----
+xcode-select --install
+----
+
+=== Building
+
+It's really easy to build the project. Just run the following `make` command in your terminal:
+
+
+[source,sh]
+----
+make all
+----
+
+This will build the project and create an executable called `./build/server`.
+
+=== Running
+
+Just like building the project, running the project is also really easy. You can excute the server by running the following command in your terminal:
+
+[source,sh]
+----
+./build/server
+----
+
+== Expected Output
+
+If you run the server and then open a web browser and navigate to `http://localhost:4523`, you will see a web page that says "Hello, World!". Here is it in it's response form:
+
+[source,http]
+----
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 52
+
+<!DOCTYPE html><html><body>Hello World</body></html>
+----
+
+You will also see the following output in the terminal where you ran the server:
+
+[source,sh]
+----
+Starting server...
+Server ready at http://127.0.0.1:4520/
+Waiting for connection...
+Sending data...
+Waiting for connection...
+----
+
+== License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
